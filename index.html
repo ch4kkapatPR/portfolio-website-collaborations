@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading -->
      <div class="loader">
     <div class="loader-content">
         <div class="spinner"></div>
         <p>Loading...</p>
     </div>
 </div>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -41,10 +39,14 @@
     <div class="progress-bar"></div>
 </div>
 
-    <!-- Hero Section -->
+
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hello, We're <span class="highlight">Ni Horse Team</span></h1>
+            <p class="hero-subtitle">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </p>
             <p class="hero-subtitle">Website Developers</p>
             <p class="hero-description">We create cool websites for cool people</p>
             <div class="hero-buttons">
@@ -57,7 +59,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Us</h2>
@@ -129,8 +131,54 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Our Projects</h2>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web-Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+            </div>
+        
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="web">
+                    <img src="images/project4.png" alt="Project 4">
+                    <div class="project-info">
+                        <h3>Website</h3>
+                        <p>just simple website here</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-smol">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <div class="project-card" data-category="mobile">
+                    <img src="images/project5.png" alt="Project 5">
+                    <div class="project-info">
+                        <h3>cherry app</h3>
+                        <p>For cat only</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-smol">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <div class="project-card" data-category="ui">
+                    <img src="images/Project6.png" alt="Project 6">
+                    <div class="project-info">
+                        <h3>Waazaaaaaaaaaa</h3>
+                        <p>Meoww</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-smol">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" data-category="mobile">
                     <img src="images/project1.jpg" alt="Project 1">
                     <div class="project-info">
                         <h3>Carrot</h3>
@@ -141,7 +189,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ui">
                     <img src="images/project2.jpg" alt="Project 2">
                     <div class="project-info">
                         <h3>Horse shoes</h3>
@@ -152,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="web">
                     <img src="images/project3.png" alt="Project 3">
                     <div class="project-info">
                         <h3>Mambo</h3>
@@ -164,8 +212,13 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </section>
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
